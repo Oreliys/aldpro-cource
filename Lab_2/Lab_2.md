@@ -221,7 +221,14 @@ deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.5/repository-update 1.7_
 deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.5/repository-base 1.7_x86-64 main non-free contrib
 deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.5/repository-extended 1.7_x86-64 main contrib non-free
 ```
+Для установки на сервере под управлением Astra Linux SE 1.7.7 ALD Pro версии "2.5.0" из официальных интернет-репозиториев РБТ-Астра. Содержание файла **/etc/apt/sources.list** должно быть следующим:
 
+```
+deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.7/repository-main 1.7_x86-64 main non-free contrib
+deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.7/repository-update 1.7_x86-64 main contrib non-free
+deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.7/repository-base 1.7_x86-64 main non-free contrib
+deb http://dl.astralinux.ru/astra/frozen/1.7_x86-64/1.7.7/repository-extended 1.7_x86-64 main contrib non-free
+```
 Наверняка, вы ранее использовали stable ветку для решения большинства своих рабочих задач. Для развертывания ALD Pro нерекомендуется торопится и использовать stable версию, в силу того, что программный комплекс ALD Pro очень зависим от версионности программ внутри. А stable, конечно же, обновляется и актуализируется. 
 
 Так что используем только frozen - для стабильной работы системы. 
@@ -239,7 +246,9 @@ sudo nano /etc/apt/sources.list.d/aldpro.list
 ```
 deb https://dl.astralinux.ru/aldpro/frozen/01/2.3.0 1.7_x86-64 main base
 ```
-
+Для версии ALD Pro "2.5.0"
+deb https://dl.astralinux.ru/aldpro/frozen/01/2.5.0 1.7_x86-64 main base
+```
 Для понимания вписанной строки, давайте проведем её декодинг:
 
 * deb — указывает на то, что репозиторий соответствует репозиторию бинарных файлов с предварительно скомпилированными пакетами. Для репозиториев с исходными кодами используют «deb-src»
